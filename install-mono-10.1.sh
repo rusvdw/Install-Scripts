@@ -56,3 +56,11 @@ cd ../mod_mono-$MODVER
 
 /sbin/ldconfig
 
+echo "Updating the browser capabilities file..."
+
+cd /usr/local/etc/mono/
+rm browscap.ini
+wget -O browscap.ini http://browsers.garykeith.com/stream.asp?BrowsCapINI
+
+
+echo "DONE!"
