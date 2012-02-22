@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CVER="1.0.2"
+CVER="1.1.1"
 
 # first, install the packaged version to get all the requirements
 apt-get install couchdb
