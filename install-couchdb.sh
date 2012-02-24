@@ -3,14 +3,14 @@
 CVER="1.0.3"
 
 # first, install the packaged version to get all the requirements
-apt-get install couchdb
+apt-get install couchdb -y
 /etc/init.d/couchdb stop
 # make sure it's dead
 # pkill -f couchdb
 
 apt-get remove couchdb
 apt-get build-dep couchdb
-apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool
+apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool -y
 cd /src; mkdir couchdb; cd couchdb
 wget http://apache.is.co.za//couchdb/$CVER/apache-couchdb-$CVER.tar.gz
 tar -zxvf apache-couchdb-$CVER.tar.gz; cd apache-couchdb-$CVER/

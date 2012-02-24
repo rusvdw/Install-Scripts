@@ -7,7 +7,7 @@ MODVER="2.10"
 
 apt-get remove mono-common
 apt-get update
-apt-get install build-essential pkg-config libglib2.0-dev bison libcairo2-dev libungif4-dev libjpeg62-dev libtiff4-dev gettext apache2-threaded-dev
+apt-get install build-essential pkg-config libglib2.0-dev bison libcairo2-dev libungif4-dev libjpeg62-dev libtiff4-dev gettext apache2-threaded-dev -y
 
 mkdir /src
 mkdir /src/monoscript$MONOVER
@@ -26,10 +26,10 @@ echo "make uninstall" >> uninstall.sh
 
 chmod +x uninstall.sh
 
-wget http://download.mono-project.com/sources/libgdiplus/libgdiplus-$LIBVER.tar.bz2
-wget http://download.mono-project.com/sources/mono/mono-$MONOVER.tar.bz2
-wget http://download.mono-project.com/sources/xsp/xsp-$XSPVER.tar.bz2
-wget http://download.mono-project.com/sources/mod_mono/mod_mono-$MODVER.tar.bz2
+wget -N http://download.mono-project.com/sources/libgdiplus/libgdiplus-$LIBVER.tar.bz2
+wget -N http://download.mono-project.com/sources/mono/mono-$MONOVER.tar.bz2
+wget -N http://download.mono-project.com/sources/xsp/xsp-$XSPVER.tar.bz2
+wget -N http://download.mono-project.com/sources/mod_mono/mod_mono-$MODVER.tar.bz2
 
 tar -xvf libgdiplus-$LIBVER.tar.bz2
 tar -xvf mono-$MONOVER.tar.bz2
