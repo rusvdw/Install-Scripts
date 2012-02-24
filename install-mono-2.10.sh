@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LIBVER="2.10.8"
+LIBVER="2.10"
 MONOVER="2.10.8"
 XSPVER="2.10.2"
 MODVER="2.10"
