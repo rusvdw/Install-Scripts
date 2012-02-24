@@ -8,7 +8,7 @@ apt-get install couchdb -y
 # make sure it's dead
 # pkill -f couchdb
 
-apt-get remove couchdb
+apt-get remove couchdb -y
 apt-get build-dep couchdb
 apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool -y
 cd /src; mkdir couchdb; cd couchdb
