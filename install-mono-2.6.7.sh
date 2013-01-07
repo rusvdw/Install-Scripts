@@ -4,6 +4,7 @@ LIBVER="2.6.7"
 MONOVER="2.6.7"
 XSPVER="2.6.5"
 MODVER="2.6.3"
+URL="http://download.mono-project.com/sources"
 
 apt-get remove mono-common
 apt-get update
@@ -26,10 +27,10 @@ echo "make uninstall" >> uninstall.sh
 
 chmod +x uninstall.sh
 
-wget http://ftp.novell.com/pub/mono/sources/libgdiplus/libgdiplus-$LIBVER.tar.bz2
-wget http://ftp.novell.com/pub/mono/sources/mono/mono-$MONOVER.tar.bz2
-wget http://ftp.novell.com/pub/mono/sources/xsp/xsp-$XSPVER.tar.bz2
-wget http://ftp.novell.com/pub/mono/sources/mod_mono/mod_mono-$MODVER.tar.bz2
+wget $URL/libgdiplus/libgdiplus-$LIBVER.tar.bz2
+wget $URL/mono/mono-$MONOVER.tar.bz2
+wget $URL/xsp/xsp-$XSPVER.tar.bz2
+wget $URL/mod_mono/mod_mono-$MODVER.tar.bz2
 
 tar -xvf libgdiplus-$LIBVER.tar.bz2
 tar -xvf mono-$MONOVER.tar.bz2
