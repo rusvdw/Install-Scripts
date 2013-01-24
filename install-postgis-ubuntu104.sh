@@ -60,7 +60,6 @@ sudo ldconfig
 
 sudo /etc/init.d/postgresql-8.4 start
 
-echo "NOTICE: Be sure to add \"/usr/lib/postgresql/8.4/bin\" to the /etc/environment file"
+cp /usr/lib/postgresql/8.4/bin/shp2pgsql /usr/bin/
+cp /usr/lib/postgresql/8.4/bin/pgsql2shp /usr/bin/
 
-
-#sudo su postgres -c "echo 'export PATH=$PATH:/usr/lib/postgresql/8.4/bin' >> ~/.bashrc"
