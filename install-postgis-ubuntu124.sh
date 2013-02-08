@@ -38,7 +38,7 @@ cd /src/
 wget http://download.osgeo.org/gdal/gdal-1.9.2.tar.gz
 tar xvzf gdal-1.9.2.tar.gz
 cd gdal-1.9.2/
-./configure --prefix=/usr/ --with-geos=/usr/bin/geos-config --with-pg=/usr/lib/postgresql/9.1/bin/pg_config --with-python
+./configure --prefix=/usr/ --with-geos=/usr/bin/geos-config --with-pg=/usr/lib/postgresql/9.1/bin/pg_config --with-python --with-libtiff=/usr/lib
 make -j2
 make install
 
