@@ -6,7 +6,7 @@ GEOSVER='3.3.7'
 GDALVER='1.9.2'
 POSTGISVER='2.0.2'
 
-sudo /etc/init.d/postgresql-9.1 stop
+sudo /etc/init.d/postgresql stop
 
 # Remove existing PostGIS and dependancies
 sudo aptitude remove postgis postgresql-9.1-postgis \
@@ -54,7 +54,7 @@ make install
 # then
 sudo ldconfig
 
-sudo /etc/init.d/postgresql-9.1 start
+sudo /etc/init.d/postgresql start
 
 cp /usr/lib/postgresql/9.1/bin/shp2pgsql /usr/bin/
 cp /usr/lib/postgresql/9.1/bin/pgsql2shp /usr/bin/
