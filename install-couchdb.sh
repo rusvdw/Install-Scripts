@@ -9,10 +9,12 @@ apt-get install couchdb -y
 # pkill -f couchdb
 
 apt-get remove couchdb -y
-apt-get build-dep couchdb
-apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool -y
+apt-get build-dep couchdb -y
+apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool erlang-os-mon -y
 cd /src; mkdir couchdb; cd couchdb
-wget http://apache.is.co.za//couchdb/$CVER/apache-couchdb-$CVER.tar.gz
+
+wget http://www.coretelematics.com/files/apache-couchdb-$CVER.tar.gz
+#wget http://apache.is.co.za/couchdb/source/$CVER/apache-couchdb-$CVER.tar.gz
 tar -zxvf apache-couchdb-$CVER.tar.gz; cd apache-couchdb-$CVER/
 
 # now get the xul runner version that was installed
