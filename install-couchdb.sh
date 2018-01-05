@@ -5,8 +5,6 @@ CVER="1.0.4"
 # first, install the packaged version to get all the requirements
 apt-get install couchdb -y
 /etc/init.d/couchdb stop
-# make sure it's dead
-pkill -9 -f couchdb
 
 apt-get remove couchdb -y
 apt-get build-dep couchdb -y
