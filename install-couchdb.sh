@@ -6,14 +6,14 @@ CVER="1.0.4"
 apt-get install couchdb -y
 /etc/init.d/couchdb stop
 # make sure it's dead
-# pkill -f couchdb
+pkill -9 -f couchdb
 
 apt-get remove couchdb -y
 apt-get build-dep couchdb -y
 apt-get install xulrunner-dev libicu-dev libcurl4-gnutls-dev libtool erlang-os-mon -y
 cd /src; mkdir couchdb; cd couchdb
 
-wget http://www.coretelematics.com/files/apache-couchdb-$CVER.tar.gz
+wget http://kt01.net/deploy/files/apache-couchdb-$CVER.tar.gz
 #wget http://apache.is.co.za/couchdb/source/$CVER/apache-couchdb-$CVER.tar.gz
 tar -zxvf apache-couchdb-$CVER.tar.gz; cd apache-couchdb-$CVER/
 
@@ -37,3 +37,5 @@ chmod -R 0777 /usr/local/var/log/couchdb;
 chmod -R 0777 /usr/local/lib/couchdb;
 update-rc.d couchdb defaults
 
+# make sure it's dead
+pkill -9 -f couchdb
